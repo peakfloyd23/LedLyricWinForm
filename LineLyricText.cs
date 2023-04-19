@@ -16,5 +16,36 @@ namespace LedLyricWinForm
         {
             InitializeComponent();
         }
+
+
+        public void setLineTextBoxValue(string value)
+        {
+            this.lyricLabel.Text = value;
+        }
+
+        public void Close()
+        {
+            this.Dispose();
+        }
+
+        public void setTextBoxFont(Font font)
+        {
+            this.lyricLabel.Font = font;
+        }
+
+        public void setTextColor(Color color)
+        {
+            this.lyricLabel.ForeColor = color;
+        }
+
+        public void setTextBoxPosition(Point position)
+        {
+            this.lyricLabel.Location = position;
+        }
+
+        public void setTextBoxSize(Size size)
+        {
+            this.lyricLabel.Size = size;
+        }
     }
 }

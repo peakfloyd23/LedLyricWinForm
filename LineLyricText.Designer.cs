@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lyricLine = new TextBox();
+            lyricLabel = new Label();
             SuspendLayout();
             // 
-            // lyricLine
+            // lyricLabel
             // 
-            lyricLine.Location = new Point(-2, -4);
-            lyricLine.Name = "lyricLine";
-            lyricLine.Size = new Size(801, 30);
-            lyricLine.TabIndex = 0;
+            lyricLabel.AutoSize = true;
+            lyricLabel.Location = new Point(-1, 43);
+            lyricLabel.Name = "lyricLabel";
+            lyricLabel.Size = new Size(0, 24);
+            lyricLabel.TabIndex = 0;
             // 
             // LineLyricText
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(800, 24);
+            ClientSize = new Size(1813, 113);
             ControlBox = false;
-            Controls.Add(lyricLine);
+            Controls.Add(lyricLabel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "LineLyricText";
+            StartPosition = FormStartPosition.Manual;
             Text = "LineLyricText";
             ResumeLayout(false);
             PerformLayout();
@@ -55,17 +57,6 @@
 
         #endregion
 
-        private TextBox lyricLine;
-
-
-        public void setLineTextBoxValue(string value)
-        {
-            this.lyricLine.Text = value;
-        }
-
-        public void Close()
-        {
-            this.Dispose();
-        }
+        private Label lyricLabel;
     }
 }

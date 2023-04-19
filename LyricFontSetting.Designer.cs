@@ -29,26 +29,28 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
             button1 = new Button();
-            button2 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            textBox3 = new TextBox();
+            groupBox2 = new GroupBox();
+            Height = new NumericUpDown();
+            Width = new NumericUpDown();
+            YPosition = new NumericUpDown();
+            XPosition = new NumericUpDown();
             label4 = new Label();
-            textBox4 = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             button3 = new Button();
             button4 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Height).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Width).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)YPosition).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)XPosition).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button1);
             groupBox1.Location = new Point(66, 66);
             groupBox1.Name = "groupBox1";
@@ -56,23 +58,6 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "字体和颜色";
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(textBox1);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Location = new Point(66, 478);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(633, 289);
-            groupBox2.TabIndex = 5;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "位置设置";
             // 
             // button1
             // 
@@ -82,63 +67,53 @@
             button1.TabIndex = 0;
             button1.Text = "选择字体";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // button2
+            // groupBox2
             // 
-            button2.Location = new Point(232, 142);
-            button2.Name = "button2";
-            button2.Size = new Size(152, 34);
-            button2.TabIndex = 1;
-            button2.Text = "选择颜色";
-            button2.UseVisualStyleBackColor = true;
+            groupBox2.Controls.Add(Height);
+            groupBox2.Controls.Add(Width);
+            groupBox2.Controls.Add(YPosition);
+            groupBox2.Controls.Add(XPosition);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(label1);
+            groupBox2.Location = new Point(66, 478);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(633, 289);
+            groupBox2.TabIndex = 5;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "位置设置";
             // 
-            // label1
+            // Height
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(44, 63);
-            label1.Name = "label1";
-            label1.Size = new Size(26, 24);
-            label1.TabIndex = 0;
-            label1.Text = "X:";
+            Height.Location = new Point(423, 154);
+            Height.Name = "Height";
+            Height.Size = new Size(180, 30);
+            Height.TabIndex = 11;
             // 
-            // label2
+            // Width
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(353, 63);
-            label2.Name = "label2";
-            label2.Size = new Size(25, 24);
-            label2.TabIndex = 1;
-            label2.Text = "Y:";
+            Width.Location = new Point(98, 154);
+            Width.Maximum = new decimal(new int[] { 4000, 0, 0, 0 });
+            Width.Name = "Width";
+            Width.Size = new Size(180, 30);
+            Width.TabIndex = 10;
             // 
-            // textBox1
+            // YPosition
             // 
-            textBox1.Location = new Point(143, 62);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 30);
-            textBox1.TabIndex = 2;
+            YPosition.Location = new Point(423, 63);
+            YPosition.Name = "YPosition";
+            YPosition.Size = new Size(180, 30);
+            YPosition.TabIndex = 9;
             // 
-            // textBox2
+            // XPosition
             // 
-            textBox2.Location = new Point(443, 57);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(150, 30);
-            textBox2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(42, 154);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 24);
-            label3.TabIndex = 4;
-            label3.Text = "宽度:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(141, 157);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(150, 30);
-            textBox3.TabIndex = 5;
+            XPosition.Location = new Point(98, 63);
+            XPosition.Name = "XPosition";
+            XPosition.Size = new Size(180, 30);
+            XPosition.TabIndex = 8;
             // 
             // label4
             // 
@@ -149,12 +124,32 @@
             label4.TabIndex = 6;
             label4.Text = "高度:";
             // 
-            // textBox4
+            // label3
             // 
-            textBox4.Location = new Point(443, 151);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(150, 30);
-            textBox4.TabIndex = 7;
+            label3.AutoSize = true;
+            label3.Location = new Point(42, 154);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 24);
+            label3.TabIndex = 4;
+            label3.Text = "宽度:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(353, 63);
+            label2.Name = "label2";
+            label2.Size = new Size(25, 24);
+            label2.TabIndex = 1;
+            label2.Text = "Y:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(44, 63);
+            label1.Name = "label1";
+            label1.Size = new Size(26, 24);
+            label1.TabIndex = 0;
+            label1.Text = "X:";
             // 
             // button3
             // 
@@ -189,24 +184,27 @@
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Height).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Width).EndInit();
+            ((System.ComponentModel.ISupportInitialize)YPosition).EndInit();
+            ((System.ComponentModel.ISupportInitialize)XPosition).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private GroupBox groupBox1;
-        private Button button2;
         private Button button1;
         private GroupBox groupBox2;
-        private TextBox textBox4;
         private Label label4;
-        private TextBox textBox3;
         private Label label3;
-        private TextBox textBox2;
-        private TextBox textBox1;
         private Label label2;
         private Label label1;
         private Button button3;
         private Button button4;
+        private NumericUpDown Height;
+        private NumericUpDown Width;
+        private NumericUpDown YPosition;
+        private NumericUpDown XPosition;
     }
 }

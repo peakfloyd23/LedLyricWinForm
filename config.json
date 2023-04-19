@@ -1,0 +1,35 @@
+﻿{
+  "XPosition": 0,
+  "YPosition": 0,
+  "Width": 1000,
+  "Height": 60,
+  "font": {
+    "Size": 26,
+    "Style": 0,
+    "Bold": false,
+    "Italic": false,
+    "Strikeout": false,
+    "Underline": false,
+    "FontFamily": { "Name": "Microsoft YaHei UI" },
+    "Name": "Microsoft YaHei UI",
+    "Unit": 3,
+    "GdiCharSet": 134,
+    "GdiVerticalFont": false,
+    "OriginalFontName": null,
+    "SystemFontName": "",
+    "IsSystemFont": false,
+    "Height": 67,
+    "SizeInPoints": 26
+  },
+  "color": {
+    "R": 255,
+    "G": 0,
+    "B": 0,
+    "A": 255,
+    "IsKnownColor": true,
+    "IsEmpty": false,
+    "IsNamedColor": true,
+    "IsSystemColor": false,
+    "Name": "Red"
+  }
+}
